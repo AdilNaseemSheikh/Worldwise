@@ -12,6 +12,10 @@ function ProtectedRoute({ children }) {
     }
   }, [isAuthenticated, navigate]);
 
+  // if we do not return null, then children will be returned before effect runs cuz
+  // jsx is returned before effects runs and one of children is causing some problem is returned before effect
+  //  EFFECT ONLY EXECUTED WHEN RENDER HAS HAPPENED
+
   return isAuthenticated ? children : null;
 }
 
