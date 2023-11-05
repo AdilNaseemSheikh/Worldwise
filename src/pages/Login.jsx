@@ -48,7 +48,7 @@ export default function Login() {
         </div>
 
         <div>
-          <Button onClick={handleLogin} type="login">
+          <Button onClick={handleLogin} type="primary">
             Login
           </Button>
         </div>
